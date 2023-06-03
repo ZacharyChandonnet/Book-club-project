@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module">
+      import App from "./js/App.js";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Book club</title>
+  </head>
+  <body onload="move()">
+    <div id="preloader">
+      <div id="percent">1%</div>
+      <div id="bar">
+        <div id="barconfirm"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div class="menu">
+            <ul>
+              <li><a href="#" data-scroll>01/readers</a></li>
+              <li><a href="#" data-scroll>02/reviews</a></li>
+              <li><a href="#" data-scroll>03/contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      
+            <p class="slogan">
+              IMMERSE YOURSELF IN MAGICAL WORLDS <br />
+              AND PAINT THEM UPON THE PAGES –
+            </p>
+            <p class="start">
+              <a href="#" data-scroll>get started</a>
+            </p>
+       
+
+        <h1 class="title">
+          Book <br />
+          <span>Club</span>
+        </h1>
+
+        <p class="location">
+          Book club <br />
+          Located in blainville
+        </p>
+      </header>
+    </div>
+
+    <script>
+      const tll = gsap.timeline({
+        paused: "true",
+      });
+
+      tll.to("#percent, #bar", {
+        duration: 0.5,
+        opacity: 0,
+        zIndex: -1,
+      });
+
+      tll.to("#preloader", {
+        duration: 1.5,
+        width: "0%",
+      });
+
+      tll.from(
+        ".navbar",
+        {
+          duration: 2,
+          y: "-150%",
+        },
+        "-=.2"
+      );
+
+      var width = 1;
+      var bar = document.getElementById("barconfirm");
+      var id;
+      function move() {
+        id = setInterval(frame, 10);
+      }
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          tll.play();
+        } else {
+          width++;
+          bar.style.width = width + "%";
+          document.getElementById("percent").innerHTML = width + "%";
+        }
+      }
+    </script>
+  </body>
+</html>
