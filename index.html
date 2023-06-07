@@ -32,22 +32,20 @@
         <nav class="navbar">
           <div class="menu">
             <ul>
-              <li><a href="#" data-scroll>01/readers</a></li>
+              <li><a href="#readers" data-scroll>01/readers</a></li>
               <li><a href="#" data-scroll>02/reviews</a></li>
               <li><a href="#" data-scroll>03/contact</a></li>
             </ul>
           </div>
         </nav>
 
-      
-            <p class="slogan">
-              IMMERSE YOURSELF IN MAGICAL WORLDS <br />
-              AND PAINT THEM UPON THE PAGES –
-            </p>
-            <p class="start">
-              <a href="#" data-scroll>get started</a>
-            </p>
-       
+        <p class="slogan">
+          IMMERSE YOURSELF IN MAGICAL WORLDS <br />
+          AND PAINT THEM UPON THE PAGES –
+        </p>
+        <p class="start">
+          <a href="#" data-scroll>get started</a>
+        </p>
 
         <h1 class="title">
           Book <br />
@@ -59,49 +57,56 @@
           Located in blainville
         </p>
       </header>
+
+      <section id="readers">
+        <h1>
+          OUR <br />
+          <span>Readers</span>
+        </h1>
+      </section>
     </div>
-
-    <script>
-      const tll = gsap.timeline({
-        paused: "true",
-      });
-
-      tll.to("#percent, #bar", {
-        duration: 0.5,
-        opacity: 0,
-        zIndex: -1,
-      });
-
-      tll.to("#preloader", {
-        duration: 1.5,
-        width: "0%",
-      });
-
-      tll.from(
-        ".navbar",
-        {
-          duration: 2,
-          y: "-150%",
-        },
-        "-=.2"
-      );
-
-      var width = 1;
-      var bar = document.getElementById("barconfirm");
-      var id;
-      function move() {
-        id = setInterval(frame, 10);
-      }
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          tll.play();
-        } else {
-          width++;
-          bar.style.width = width + "%";
-          document.getElementById("percent").innerHTML = width + "%";
-        }
-      }
-    </script>
   </body>
+
+  <script>
+    const tll = gsap.timeline({
+      paused: "true",
+    });
+
+    tll.to("#percent, #bar", {
+      duration: 0.5,
+      opacity: 0,
+      zIndex: -1,
+    });
+
+    tll.to("#preloader", {
+      duration: 1.5,
+      width: "0%",
+    });
+
+    tll.from(
+      ".navbar",
+      {
+        duration: 2,
+        y: "-150%",
+      },
+      "-=.2"
+    );
+
+    var width = 1;
+    var bar = document.getElementById("barconfirm");
+    var id;
+    function move() {
+      id = setInterval(frame, 10);
+    }
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        tll.play();
+      } else {
+        width++;
+        bar.style.width = width + "%";
+        document.getElementById("percent").innerHTML = width + "%";
+      }
+    }
+  </script>
 </html>
