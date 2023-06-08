@@ -249,6 +249,14 @@ h2.meeting {
       padding-top: 175px;
     }
 
+    .start{
+      a:hover{
+        background-color: var(--couleur-secondaire);
+        color: var(--couleur-principale);
+        transition: .3s ease-in-out;
+      }
+    }
+
     .title {
       font-size: 200px;
       padding-left: 15vw;

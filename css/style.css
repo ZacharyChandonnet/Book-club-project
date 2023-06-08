@@ -199,6 +199,11 @@ h2.meeting {
   header .slogan {
     padding-top: 175px;
   }
+  header .start a:hover {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-principale);
+    transition: 0.3s ease-in-out;
+  }
   header .title {
     font-size: 200px;
     padding-left: 15vw;
