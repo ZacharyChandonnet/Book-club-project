@@ -1,6 +1,6 @@
 html {
   background-color: var(--couleur-principale);
-  font-family: "gaela", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   scroll-behavior: smooth;
   font-size: 16px;
   --couleur-principale: rgb(224, 210, 193);
@@ -198,6 +198,9 @@ h2.meeting {
 @media screen and (min-width: 1200px) {
   header .slogan {
     padding-top: 175px;
+  }
+  header nav {
+    font-size: 18px;
   }
   header .start a:hover {
     background-color: var(--couleur-secondaire);

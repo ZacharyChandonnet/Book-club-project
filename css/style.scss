@@ -1,6 +1,6 @@
 html {
   background-color: var(--couleur-principale);
-  font-family: "gaela", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   scroll-behavior: smooth;
   font-size: 16px;
 
@@ -247,6 +247,10 @@ h2.meeting {
   header {
     .slogan {
       padding-top: 175px;
+    }
+
+    nav{
+      font-size: 18px;
     }
 
     .start{
