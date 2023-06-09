@@ -145,6 +145,10 @@ header {
     margin: 0 auto;
     margin-top: 50px;
 
+    #arrow {
+      display: none;
+    }
+
     .contenu {
       h2 {
         font-size: 35px;
@@ -293,7 +297,6 @@ h2.meeting {
       width: 70vw;
       height: 400px;
       position: relative;
-      
 
       .contenu {
         position: relative;
@@ -340,7 +343,7 @@ h2.meeting {
       background-position: center;
       background-size: cover;
     }
-    
+
     .box:hover .thumbnail {
       opacity: 1;
     }
@@ -354,6 +357,52 @@ h2.meeting {
       font-size: 75px;
       padding-top: 50px;
       animation: marquee 10s linear infinite;
+    }
+  }
+  
+  #reviews{
+    margin-top: 250px;
+    padding-left: 13vw;
+    .resume{
+      width: 610px;
+      line-height: 60px;
+      margin-top: 50px;
+    }
+
+    .genre{
+      margin-top: 50px;
+      display: flex;
+      font-weight: bold;
+      gap: 15px;
+    }
+
+    .border{
+      display: block;
+      border-bottom: 1px solid;
+      width: 600px;
+      margin-top: 50px;
+    }
+
+    h2{
+      font-size: 75px;
+      font-weight: 100;
+
+      span{
+        margin-left: 14.5vw;
+      }
+    }
+
+    .img{
+      img{
+        width: 550px;
+        height: 550px;
+        border-radius: 20px;
+        object-position: center;
+        object-fit: cover;
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.46);
+        margin-left: 200px;
+        margin-top: 150px;
+      }
     }
   }
 }

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-
+    <script
+      src="https://kit.fontawesome.com/3075f3c068.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +20,7 @@
     <script type="module">
       import App from "./js/App.js";
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script
@@ -25,6 +29,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <title>Book club</title>
   </head>
   <body onload="move()">
@@ -76,6 +81,7 @@
           <div class="contenu">
             <h2>alexis</h2>
             <h3>fantasy enthusiast</h3>
+            <i class="fa-solid fa-arrow-right" style="color: #252620"></i>
             <div class="thumbnail"></div>
           </div>
         </div>
@@ -112,11 +118,35 @@
 
     <section id="reviews">
       <div class="book">
-        <h2>The Inheritance <br>
-        games</h2>
+        <h2>
+          The Inheritance <br />
+          <span>games</span>
+        </h2>
+
+        <div class="genre">
+          <p>fantasy</p>
+          <p>romance</p>
+          <p>drama</p>
+        </div>
+
+        <span class="border"></span>
+
+        <p class="resume">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
+          hendrerit neque, at rutrum neque hendrerit ut. In sagittis nibh id
+          nisl condimentum feugiat. Curabitur auctor sem eget dui fringilla, non
+          convallis velit vestibulum. In nec efficitur ipsum, vitae sollicitudin
+          massa. Quisque sagittis massa vel dolor malesuada, id tincidunt ex
+          vestibulum. Maecenas eu volutpat nisl. Pellentesque quis mauris sit
+          amet justo tincidunt pellentesque. Nullam nec tincidunt lacus. Aenean
+          semper facilisis nulla, et viverra eros tempor vitae.
+        </p>
       </div>
       <div class="img">
-        <img src="/img/the-inheritance-games-taschenbuch-jennifer-lynn-barnes.jpeg" alt="">
+        <img
+          src="/img/the-inheritance-games-taschenbuch-jennifer-lynn-barnes.jpeg"
+          alt=""
+        />
       </div>
     </section>
   </body>
