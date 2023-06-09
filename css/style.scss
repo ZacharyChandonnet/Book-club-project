@@ -1,6 +1,6 @@
 html {
   background-color: var(--couleur-principale);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   scroll-behavior: smooth;
   font-size: 16px;
 
@@ -178,7 +178,7 @@ header {
   0% {
     transform: translateX(100%);
   }
-  
+
   100% {
     transform: translateX(-100%);
   }
@@ -194,9 +194,9 @@ h2.meeting {
   animation: marquee 5s linear infinite;
 }
 
-
-
-
+#reviews {
+  display: flex;
+}
 
 /*     SMALL PHONE        */
 
@@ -233,9 +233,9 @@ h2.meeting {
       }
     }
   }
-  
-  #meeting{
-    h2{
+
+  #meeting {
+    h2 {
       animation: marquee 7s linear infinite;
     }
   }
@@ -249,15 +249,15 @@ h2.meeting {
       padding-top: 175px;
     }
 
-    nav{
+    nav {
       font-size: 18px;
     }
 
-    .start{
-      a:hover{
+    .start {
+      a:hover {
         background-color: var(--couleur-secondaire);
         color: var(--couleur-principale);
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
     }
 
@@ -292,8 +292,11 @@ h2.meeting {
     .box {
       width: 70vw;
       height: 400px;
+      position: relative;
+      
 
-      .contenu{
+      .contenu {
+        position: relative;
         h2 {
           font-size: 75px;
           margin-top: 115px;
@@ -304,13 +307,50 @@ h2.meeting {
         }
       }
     }
+    .thumbnail {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 400px;
+      height: 400px;
+      background-image: url(/img/alexis.jpg);
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      transform: translateX(175%) rotate(30deg);
+      transform-origin: bottom right;
+      border-radius: 20px;
+    }
+
+    .box:nth-of-type(2) .thumbnail {
+      background-image: url(/img/karo.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .box:nth-of-type(3) .thumbnail {
+      background-image: url(/img/r1.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .box:nth-of-type(4) .thumbnail {
+      background-image: url(/img/r2.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .box:hover .thumbnail {
+      opacity: 1;
+    }
   }
 
-  #meeting{
+  #meeting {
     height: 150px;
     margin-top: 250px;
 
-    h2{
+    h2 {
       font-size: 75px;
       padding-top: 50px;
       animation: marquee 10s linear infinite;

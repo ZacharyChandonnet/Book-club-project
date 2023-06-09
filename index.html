@@ -41,7 +41,7 @@
           <div class="menu">
             <ul>
               <li><a href="#readers" data-scroll>01/readers</a></li>
-              <li><a href="#" data-scroll>02/reviews</a></li>
+              <li><a href="#reviews" data-scroll>02/reviews</a></li>
               <li><a href="#" data-scroll>03/contact</a></li>
             </ul>
           </div>
@@ -76,6 +76,7 @@
           <div class="contenu">
             <h2>alexis</h2>
             <h3>fantasy enthusiast</h3>
+            <div class="thumbnail"></div>
           </div>
         </div>
 
@@ -83,6 +84,7 @@
           <div class="contenu">
             <h2>karolanne</h2>
             <h3>fantasy enthusiast</h3>
+            <div class="thumbnail"></div>
           </div>
         </div>
 
@@ -90,6 +92,7 @@
           <div class="contenu">
             <h2>ariane</h2>
             <h3>fantasy enthusiast</h3>
+            <div class="thumbnail"></div>
           </div>
         </div>
 
@@ -98,6 +101,7 @@
             <h2>alizanne</h2>
             <h3>fantasy enthusiast</h3>
           </div>
+          <div class="thumbnail"></div>
         </div>
       </section>
 
@@ -105,25 +109,35 @@
         <h2 class="meeting scrolling-text">NEXT MEETING : June 24th</h2>
       </section>
     </div>
+
+    <section id="reviews">
+      <div class="book">
+        <h2>The Inheritance <br>
+        games</h2>
+      </div>
+      <div class="img">
+        <img src="/img/the-inheritance-games-taschenbuch-jennifer-lynn-barnes.jpeg" alt="">
+      </div>
+    </section>
   </body>
 
   <script>
-    const tll = gsap.timeline({
+    const screen = gsap.timeline({
       paused: "true",
     });
 
-    tll.to("#percent, #bar", {
+    screen.to("#percent, #bar", {
       duration: 0.5,
       opacity: 0,
       zIndex: -1,
     });
 
-    tll.to("#preloader", {
+    screen.to("#preloader", {
       duration: 1.5,
       width: "0%",
     });
 
-    tll.from(
+    screen.from(
       ".navbar",
       {
         duration: 2,
@@ -141,7 +155,7 @@
     function frame() {
       if (width >= 100) {
         clearInterval(id);
-        tll.play();
+        screen.play();
       } else {
         width++;
         bar.style.width = width + "%";

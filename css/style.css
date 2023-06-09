@@ -167,6 +167,10 @@ h2.meeting {
   animation: marquee 5s linear infinite;
 }
 
+#reviews {
+  display: flex;
+}
+
 /*     SMALL PHONE        */
 @media screen and (max-width: 375px) {
   header .title {
@@ -231,6 +235,10 @@ h2.meeting {
   #readers .box {
     width: 70vw;
     height: 400px;
+    position: relative;
+  }
+  #readers .box .contenu {
+    position: relative;
   }
   #readers .box .contenu h2 {
     font-size: 75px;
@@ -239,6 +247,39 @@ h2.meeting {
   #readers .box .contenu h3 {
     font-size: 32px;
     font-style: italic;
+  }
+  #readers .thumbnail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    background-image: url(/img/alexis.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transform: translateX(175%) rotate(30deg);
+    transform-origin: bottom right;
+    border-radius: 20px;
+  }
+  #readers .box:nth-of-type(2) .thumbnail {
+    background-image: url(/img/karo.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  #readers .box:nth-of-type(3) .thumbnail {
+    background-image: url(/img/r1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  #readers .box:nth-of-type(4) .thumbnail {
+    background-image: url(/img/r2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  #readers .box:hover .thumbnail {
+    opacity: 1;
   }
   #meeting {
     height: 150px;
