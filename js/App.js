@@ -73,19 +73,27 @@ export default class App {
         });
       
         elements.forEach((element, index) => {
+          const arrow = arrows[index];
+      
           if (isMobile) {
             element.addEventListener('touchstart', () => {
               element.classList.toggle('hovered');
+      
+              if (element.classList.contains('hovered')) {
+                arrow.classList.add('arrow');
+              } else {
+                arrow.classList.remove('arrow');
+              }
             });
           } else {
             element.addEventListener('mouseover', () => {
               element.classList.add('hovered');
-              arrows[index].classList.add('arrow');
+              arrow.classList.add('arrow');
             });
       
             element.addEventListener('mouseout', () => {
               element.classList.remove('hovered');
-              arrows[index].classList.remove('arrow');
+              arrow.classList.remove('arrow');
             });
           }
         });
