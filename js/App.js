@@ -62,26 +62,33 @@ export default class App {
     }
 
     static hover() {
+
         const elements = document.querySelectorAll('.box');
-
+        const arrows = document.querySelectorAll('.box .fa-arrow-left');
+      
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        elements.forEach(element => {
-            if (isMobile) {
-                element.addEventListener('touchstart', () => {
-                    element.classList.toggle('hovered');
-                });
-            } else {
-                element.addEventListener('mouseover', () => {
-                    element.classList.add('hovered');
-                });
-
-                element.addEventListener('mouseout', () => {
-                    element.classList.remove('hovered');
-                });
-            }
+      
+        arrows.forEach(arrow => {
+          arrow.classList.remove('arrow');
+        });
+      
+        elements.forEach((element, index) => {
+          if (isMobile) {
+            element.addEventListener('touchstart', () => {
+              element.classList.toggle('hovered');
+            });
+          } else {
+            element.addEventListener('mouseover', () => {
+              element.classList.add('hovered');
+              arrows[index].classList.add('arrow');
+            });
+      
+            element.addEventListener('mouseout', () => {
+              element.classList.remove('hovered');
+              arrows[index].classList.remove('arrow');
+            });
+          }
         });
     }
-
 }
 App.init();

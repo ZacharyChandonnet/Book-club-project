@@ -17,6 +17,12 @@ html {
   text-align: center;
 }
 
+.arrow {
+  transform: rotate(-45deg);
+  transition: 0.5s ease;
+}
+
+
 /*  PRELOADER  */
 #preloader {
   position: fixed;
@@ -153,9 +159,13 @@ header {
     height: 250px;
     width: 83vw;
     margin: 0 auto;
+    position: relative;
 
-    #arrow {
-      display: none;
+    i{
+      position: absolute;
+      font-size: 30px;
+      bottom: 80%;
+      left: 95%;
     }
 
     .contenu {
