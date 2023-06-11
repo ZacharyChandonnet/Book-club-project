@@ -8,6 +8,8 @@ export default class App {
     static main() {
         this.slogan();
         this.title();
+        this.scroll();
+        this.hover();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -50,13 +52,34 @@ export default class App {
     static title() {
         const myText = new SplitType('.title');
 
-        gsap.to('.char',{
+        gsap.to('.char', {
             delay: 2.5,
             y: 0,
             stagger: 0.05,
             duration: 0.1,
             opacity: 1,
         });
+    }
+
+    static hover() {
+
+        const elements = document.querySelectorAll('.box');
+
+        elements.forEach(element => {
+            element.addEventListener('mouseover', () => {
+                element.classList.add('hovered');
+            });
+
+            element.addEventListener('click', () => {
+                element.classList.toggle('hovered');
+              });
+    
+            element.addEventListener('mouseout', () => {
+                element.classList.remove('hovered');
+            });
+        });
+
+
     }
 }
 App.init();
