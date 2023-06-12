@@ -7,6 +7,23 @@ html {
   --couleur-secondaire: #252620;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--couleur-principale);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--couleur-secondaire);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+}
+
 .hovered {
   color: white;
   background-color: var(--couleur-secondaire);
