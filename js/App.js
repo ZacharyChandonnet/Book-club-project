@@ -10,6 +10,7 @@ export default class App {
     this.title();
     this.scroll();
     this.hover();
+    this.text();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -103,6 +104,36 @@ export default class App {
       }
     });
 
+  }
+
+  static text() {
+    const myText = document.querySelector(".friends");
+    const text = myText.innerText;
+    let index = 0;
+  
+    function nextLetter() {
+      myText.style.display = "block";
+      myText.innerText = text.substr(0, index);
+      index++;
+  
+      if (index <= text.length) {
+        gsap.delayedCall(0.08, nextLetter);
+      } else {
+        gsap.delayedCall(1, clearText);
+      }
+    }
+  
+    function clearText() {
+      gsap.to(myText, { duration: 0.5, opacity: 0, onComplete: restartAnimation });
+    }
+  
+    function restartAnimation() {
+      myText.textContent = "";
+      index = 0;
+      gsap.to(myText, { duration: 0.1, opacity: 1, onComplete: nextLetter });
+    }
+  
+    nextLetter();
   }
 }
 App.init();
