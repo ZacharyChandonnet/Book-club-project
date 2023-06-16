@@ -344,7 +344,7 @@ h2.meeting {
 #review {
   margin-top: 75px;
   background-color: var(--couleur-secondaire);
-  height: 700px;
+  height: 900px;
 
   h2 {
     color: var(--couleur-principale);
@@ -361,7 +361,7 @@ h2.meeting {
 
   .vignette {
     display: flex;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-left: 7vw;
     color: white;
     font-weight: 100;
@@ -372,12 +372,13 @@ h2.meeting {
       border-radius: 50px;
       background-position: center;
       background-size: cover;
-
     }
 
     p {
       margin-left: 20px;
-      margin-top: 20px;
+      margin-top: 10px;
+      width: 62vw;
+      line-height: 20px;
     }
   }
 }
@@ -406,6 +407,10 @@ footer {
       border: none;
       margin-top: 30px;
       border-bottom: 1px solid var(--couleur-secondaire);
+    }
+
+    input:focus {
+      outline: none;
     }
 
     button {
@@ -535,6 +540,31 @@ footer {
 
     .border {
       width: 550px;
+    }
+  }
+
+  #review{
+    h2{
+      font-size: 75px;
+      margin-top: 55px;
+    }
+
+    .vignette{
+      p{
+        line-height: 25px;
+      }
+    }
+  }
+
+  footer{
+    h2{
+      font-size: 75px;
+      margin-top: 55px;
+      font-weight: 100;
+
+      span{
+        padding-left: 55px;
+      }
     }
   }
 }
@@ -730,10 +760,6 @@ footer {
         margin-top: 50px !important;
         border-bottom: 1px solid var(--couleur-secondaire);
       }
-
-      input:focus {
-        outline: none;
-      }
       margin-bottom: inherit !important;
 
       button {
@@ -778,6 +804,8 @@ footer {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
       }
 
       p {

@@ -302,7 +302,7 @@ h2.meeting {
 #review {
   margin-top: 75px;
   background-color: var(--couleur-secondaire);
-  height: 700px;
+  height: 900px;
 }
 #review h2 {
   color: var(--couleur-principale);
@@ -317,7 +317,7 @@ h2.meeting {
 }
 #review .vignette {
   display: flex;
-  margin-top: 40px;
+  margin-top: 70px;
   margin-left: 7vw;
   color: white;
   font-weight: 100;
@@ -331,7 +331,9 @@ h2.meeting {
 }
 #review .vignette p {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
+  width: 62vw;
+  line-height: 20px;
 }
 
 footer h2 {
@@ -356,6 +358,9 @@ footer form input {
   border: none;
   margin-top: 30px;
   border-bottom: 1px solid var(--couleur-secondaire);
+}
+footer form input:focus {
+  outline: none;
 }
 footer form button {
   margin-top: 30px;
@@ -450,6 +455,21 @@ footer .friends {
   }
   #reviews .border {
     width: 550px;
+  }
+  #review h2 {
+    font-size: 75px;
+    margin-top: 55px;
+  }
+  #review .vignette p {
+    line-height: 25px;
+  }
+  footer h2 {
+    font-size: 75px;
+    margin-top: 55px;
+    font-weight: 100;
+  }
+  footer h2 span {
+    padding-left: 55px;
   }
 }
 /*     DESKTOP        */
@@ -612,9 +632,6 @@ footer .friends {
     margin-top: 50px !important;
     border-bottom: 1px solid var(--couleur-secondaire);
   }
-  footer form input:focus {
-    outline: none;
-  }
   footer form button {
     width: 10vw !important;
   }
@@ -652,6 +669,10 @@ footer .friends {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   #review .vignette p {
     margin-top: 20px;
