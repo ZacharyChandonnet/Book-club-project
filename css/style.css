@@ -295,6 +295,41 @@ h2.meeting {
 }
 #reviews .img img {
   display: none;
+  background-position: center;
+  background-size: cover;
+}
+
+#review {
+  margin-top: 75px;
+  background-color: var(--couleur-secondaire);
+  height: 700px;
+}
+#review h2 {
+  color: var(--couleur-principale);
+  font-size: 35px;
+  font-weight: 100;
+  padding-left: 7vw;
+  padding-top: 25px;
+  margin-bottom: 50px;
+}
+#review h2 span {
+  margin-left: 30px;
+}
+#review .vignette {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 7vw;
+  color: white;
+  font-weight: 100;
+}
+#review .vignette img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+#review .vignette p {
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 footer h2 {
@@ -575,10 +610,49 @@ footer .friends {
     margin-top: 50px !important;
     border-bottom: 1px solid var(--couleur-secondaire);
   }
+  footer form input:focus {
+    outline: none;
+  }
   footer form button {
     width: 10vw !important;
   }
+  footer form button:hover {
+    background-color: white !important;
+    color: var(--couleur-secondaire) !important;
+    transition: 0.5s ease-in-out;
+  }
   footer .friends {
     display: inherit !important;
+  }
+  #review {
+    height: 800px;
+  }
+  #review h2 {
+    font-size: 75px;
+    font-weight: 100;
+    padding-left: 13vw;
+    margin-top: 150px;
+    font-weight: 100;
+  }
+  #review .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    color: white;
+    font-weight: 100;
+    align-items: center;
+  }
+  #review .vignette {
+    display: flex;
+  }
+  #review .vignette img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  #review .vignette p {
+    margin-top: 20px;
+    width: 20vw;
+    line-height: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
