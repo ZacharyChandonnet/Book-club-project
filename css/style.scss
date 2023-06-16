@@ -9,22 +9,21 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--couleur-principale); 
+  background-color: var(--couleur-principale);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--couleur-secondaire); 
-  border-radius: 4px; 
+  background-color: var(--couleur-secondaire);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #fff; 
+  background-color: #fff;
 }
-
 
 .hoveredmobile {
   color: white;
@@ -35,7 +34,7 @@ html {
   text-align: left;
 }
 
-.hoveredpc{
+.hoveredpc {
   color: white;
   background-color: var(--couleur-secondaire);
   transition: 0.5s ease;
@@ -320,7 +319,7 @@ h2.meeting {
     }
   }
 
-  .resume{
+  .resume {
     width: 80vw;
     margin-top: 35px;
     line-height: 40px;
@@ -335,8 +334,41 @@ h2.meeting {
 
   .img {
     img {
-     display: none;
+      display: none;
     }
+  }
+}
+
+footer {
+  h2 {
+    padding-left: 7vw;
+    margin-top: 125px;
+    font-size: 35px;
+    font-weight: 100;
+    margin-bottom: 50px;
+
+    span {
+      padding-left: 40px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 80vw;
+      background: none;
+      border: none;
+      margin-top: 30px;
+      border-bottom: 1px solid var(--couleur-secondaire);
+    }
+    margin-bottom: 100px;
+  }
+
+  .friends{
+    display: none;
   }
 }
 
@@ -376,7 +408,6 @@ h2.meeting {
     }
 
     .box {
-  
       .thumbnail {
         margin-left: 350px;
         top: 0;
@@ -392,43 +423,43 @@ h2.meeting {
         transition: 0.1s ease;
         border-radius: 20px;
       }
-  
+
       .box:nth-of-type(2) .thumbnail {
         background-image: url(/img/karo.jpg);
         background-position: center;
         background-size: cover;
       }
-  
+
       .box:nth-of-type(3) .thumbnail {
         background-image: url(/img/r1.jpg);
         background-position: center;
         background-size: cover;
       }
-  
+
       .box:nth-of-type(4) .thumbnail {
         background-image: url(/img/r2.jpg);
         background-position: center;
         background-size: cover;
       }
-  
+
       .box:hover.thumbnail {
         opacity: 1;
       }
-  
+
       i {
         position: absolute;
         font-size: 20px;
         bottom: 80%;
         left: 95%;
       }
-  
-      .contenu {  
+
+      .contenu {
         p {
           width: inherit !important;
         }
       }
     }
-  
+
     .box:last-of-type {
       border-bottom: 1px solid var(--couleur-secondaire);
     }
@@ -440,15 +471,15 @@ h2.meeting {
     }
   }
 
-  #reviews{
-    h2{
+  #reviews {
+    h2 {
       font-size: 75px;
-      span{
+      span {
         padding-left: 285px;
       }
     }
 
-    .border{
+    .border {
       width: 550px;
     }
   }
@@ -613,5 +644,39 @@ h2.meeting {
         display: inherit;
       }
     }
+  }
+}
+
+footer {
+
+  margin-top: 150px;
+
+  h2{
+    padding-left: 13vw;
+    font-size: 75px;
+    font-weight: 100;
+  }
+  .form {
+    display: flex;
+    padding-left: 13vw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit !important;
+
+    input {
+      width: 30vw !important;
+      background: none;
+      border: none;
+      margin-top: 50px !important;
+      border-bottom: 1px solid var(--couleur-secondaire);
+    }
+    margin-bottom: inherit !important;
+
+  }
+  .friends{
+    display: inherit !important;
   }
 }
