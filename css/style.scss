@@ -344,7 +344,7 @@ h2.meeting {
 #review {
   margin-top: 75px;
   background-color: var(--couleur-secondaire);
-  height: 900px;
+  height: 850px;
 
   h2 {
     color: var(--couleur-principale);
@@ -361,7 +361,7 @@ h2.meeting {
 
   .vignette {
     display: flex;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-left: 7vw;
     color: white;
     font-weight: 100;
@@ -370,8 +370,9 @@ h2.meeting {
       width: 100px;
       height: 100px;
       border-radius: 50px;
-      background-position: center;
-      background-size: cover;
+      object-fit: cover;
+      object-position: center;
+     
     }
 
     p {
