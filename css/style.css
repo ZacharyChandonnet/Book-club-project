@@ -169,10 +169,13 @@ header .location {
 }
 #readers .box .thumbnail {
   position: absolute;
-  margin-left: 320px;
+  margin-left: 225px;
   top: 0;
-  width: 150px;
-  height: 150px;
+  margin-top: 70px;
+  margin-right: 5 100px;
+  width: 140px;
+  height: 140px;
+  transform: rotate(10deg);
   background-image: url(/img/alexis.jpg);
   background-position: center;
   background-size: cover;
@@ -218,6 +221,7 @@ header .location {
 #readers .box .contenu p {
   line-height: 20px;
   margin-top: 12px;
+  width: 50vw;
 }
 #readers .box:last-of-type {
   border-bottom: 1px solid var(--couleur-secondaire);
@@ -383,15 +387,18 @@ h2.meeting {
   #readers .box p {
     margin-top: 10px;
     line-height: 25px;
+    width: inherit !important;
   }
   #readers .thumbnail {
-    margin-left: 320px;
-    top: 0;
+    margin-left: 320px !important;
+    top: 0 !important;
     width: 400px !important;
     height: 400px !important;
+    margin-top: inherit !important;
+    margin-right: inherit !important;
     background-image: url(/img/alexis.jpg);
     opacity: 0;
-    transform: translateX(175%) rotate(30deg);
+    transform: translateX(175%) rotate(30deg) !important;
     transition: 0.1s ease;
   }
   #readers .box:nth-of-type(2) .thumbnail {

@@ -77,7 +77,7 @@ export default class App {
       const arrow = arrows[index];
 
       if (isMobile) {
-        element.addEventListener('click', () => {
+        element.addEventListener('touchstart', () => {
           element.classList.toggle('hoveredmobile');
 
           if (element.classList.contains('hoveredmobile')) {
