@@ -26,7 +26,16 @@ html {
 }
 
 
-.hovered {
+.hoveredmobile {
+  color: white;
+  background-color: var(--couleur-secondaire);
+  transition: 0.5s ease;
+  border-top: 1px solid var(--couleur-principale);
+  width: 100% !important;
+  text-align: left;
+}
+
+.hoveredpc{
   color: white;
   background-color: var(--couleur-secondaire);
   transition: 0.5s ease;
@@ -177,6 +186,43 @@ header {
     width: 83vw;
     margin: 0 auto;
     position: relative;
+
+    .thumbnail {
+      position: absolute;
+      margin-left: 320px;
+      top: 0;
+      width: 150px;
+      height: 150px;
+      background-image: url(/img/alexis.jpg);
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform-origin: bottom right;
+      transition: 0.1s ease;
+      border-radius: 20px;
+    }
+
+    .box:nth-of-type(2) .thumbnail {
+      background-image: url(/img/karo.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .box:nth-of-type(3) .thumbnail {
+      background-image: url(/img/r1.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .box:nth-of-type(4) .thumbnail {
+      background-image: url(/img/r2.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .box:hover.thumbnail {
+      opacity: 1;
+    }
 
     i {
       position: absolute;
@@ -418,37 +464,26 @@ h2.meeting {
       }
     }
     .thumbnail {
-      position: absolute;
       margin-left: 320px;
       top: 0;
-      width: 400px;
-      height: 400px;
+      width: 400px !important;
+      height: 400px !important;
       background-image: url(/img/alexis.jpg);
-      background-position: center;
-      background-size: cover;
       opacity: 0;
       transform: translateX(175%) rotate(30deg);
-      transform-origin: bottom right;
       transition: 0.1s ease;
-      border-radius: 20px;
     }
 
     .box:nth-of-type(2) .thumbnail {
       background-image: url(/img/karo.jpg);
-      background-position: center;
-      background-size: cover;
     }
 
     .box:nth-of-type(3) .thumbnail {
       background-image: url(/img/r1.jpg);
-      background-position: center;
-      background-size: cover;
     }
 
     .box:nth-of-type(4) .thumbnail {
       background-image: url(/img/r2.jpg);
-      background-position: center;
-      background-size: cover;
     }
 
     .box:hover .thumbnail {

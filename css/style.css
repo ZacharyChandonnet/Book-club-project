@@ -24,7 +24,16 @@ html {
   background-color: #fff;
 }
 
-.hovered {
+.hoveredmobile {
+  color: white;
+  background-color: var(--couleur-secondaire);
+  transition: 0.5s ease;
+  border-top: 1px solid var(--couleur-principale);
+  width: 100% !important;
+  text-align: left;
+}
+
+.hoveredpc {
   color: white;
   background-color: var(--couleur-secondaire);
   transition: 0.5s ease;
@@ -157,6 +166,38 @@ header .location {
   width: 83vw;
   margin: 0 auto;
   position: relative;
+}
+#readers .box .thumbnail {
+  position: absolute;
+  margin-left: 320px;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url(/img/alexis.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform-origin: bottom right;
+  transition: 0.1s ease;
+  border-radius: 20px;
+}
+#readers .box .box:nth-of-type(2) .thumbnail {
+  background-image: url(/img/karo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#readers .box .box:nth-of-type(3) .thumbnail {
+  background-image: url(/img/r1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#readers .box .box:nth-of-type(4) .thumbnail {
+  background-image: url(/img/r2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#readers .box .box:hover.thumbnail {
+  opacity: 1;
 }
 #readers .box i {
   position: absolute;
@@ -344,34 +385,23 @@ h2.meeting {
     line-height: 25px;
   }
   #readers .thumbnail {
-    position: absolute;
     margin-left: 320px;
     top: 0;
-    width: 400px;
-    height: 400px;
+    width: 400px !important;
+    height: 400px !important;
     background-image: url(/img/alexis.jpg);
-    background-position: center;
-    background-size: cover;
     opacity: 0;
     transform: translateX(175%) rotate(30deg);
-    transform-origin: bottom right;
     transition: 0.1s ease;
-    border-radius: 20px;
   }
   #readers .box:nth-of-type(2) .thumbnail {
     background-image: url(/img/karo.jpg);
-    background-position: center;
-    background-size: cover;
   }
   #readers .box:nth-of-type(3) .thumbnail {
     background-image: url(/img/r1.jpg);
-    background-position: center;
-    background-size: cover;
   }
   #readers .box:nth-of-type(4) .thumbnail {
     background-image: url(/img/r2.jpg);
-    background-position: center;
-    background-size: cover;
   }
   #readers .box:hover .thumbnail {
     opacity: 1;
