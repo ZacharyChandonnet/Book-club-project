@@ -8,6 +8,7 @@ html {
   --couleur-secondaire: #252620;
 }
 
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -342,6 +343,7 @@ h2.meeting {
 }
 
 #review {
+  position: relative;
   margin-top: 75px;
   background-color: var(--couleur-secondaire);
   height: 850px;
@@ -381,6 +383,13 @@ h2.meeting {
       width: 62vw;
       line-height: 20px;
     }
+  }
+
+  #check{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
   }
 }
 

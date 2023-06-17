@@ -11,6 +11,7 @@ export default class App {
     this.scroll();
     this.hover();
     this.text();
+    this.alert();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -110,30 +111,53 @@ export default class App {
     const myText = document.querySelector(".friends");
     const text = myText.innerText;
     let index = 0;
-  
+
     function nextLetter() {
       myText.style.display = "block";
       myText.innerText = text.substr(0, index);
       index++;
-  
+
       if (index <= text.length) {
         gsap.delayedCall(0.08, nextLetter);
       } else {
         gsap.delayedCall(1, clearText);
       }
     }
-  
+
     function clearText() {
       gsap.to(myText, { duration: 0.5, opacity: 0, onComplete: restartAnimation });
     }
-  
+
     function restartAnimation() {
       myText.textContent = "";
       index = 0;
       gsap.to(myText, { duration: 0.1, opacity: 1, onComplete: nextLetter });
     }
-  
+
     nextLetter();
   }
+
+
+  static alert() {
+
+    const form = document.querySelector('.formu');
+    const email = document.querySelector('#email');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (email.value == '') {
+        setTimeout(() => {
+          alert('Make sure you have entered your email address !');
+        }, 100);
+      } else {
+        setTimeout(() => {
+          alert('Votre message a bien été envoyé !');
+        }, 100);
+      }
+    });    
+  }
+
+ 
+
 }
 App.init();

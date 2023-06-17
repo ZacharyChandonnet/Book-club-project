@@ -300,6 +300,7 @@ h2.meeting {
 }
 
 #review {
+  position: relative;
   margin-top: 75px;
   background-color: var(--couleur-secondaire);
   height: 850px;
@@ -336,6 +337,12 @@ h2.meeting {
   margin-top: 10px;
   width: 62vw;
   line-height: 20px;
+}
+#review #check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
 }
 
 footer h2 {
