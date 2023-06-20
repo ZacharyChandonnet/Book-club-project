@@ -151,7 +151,7 @@ export default class App {
         }, 100);
       } else {
         setTimeout(() => {
-          alert('Votre message a bien été envoyé !');
+          alert('Your email has been sent, Thank you !');
         }, 100);
       }
     });    
