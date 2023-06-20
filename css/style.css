@@ -546,7 +546,7 @@ footer .friends {
     margin-right: inherit !important;
     background-image: url(/img/alexis.jpg);
     opacity: 0;
-    transform: translateX(175%) rotate(30deg) !important;
+    transform: translateX(-20vw) rotate(30deg) !important;
     transition: 0.1s ease;
   }
   #readers .box:nth-of-type(2) .thumbnail {
@@ -608,7 +608,7 @@ footer .friends {
     -o-object-fit: cover;
        object-fit: cover;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.46);
-    margin-left: 200px;
+    margin-left: 8vw;
     margin-top: 150px;
     display: inherit;
   }
@@ -687,5 +687,13 @@ footer .friends {
     margin-top: 20px;
     width: 20vw;
     line-height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reviews .img img {
+    margin-left: 200px;
+  }
+  #readers .thumbnail {
+    transform: translateX(-10vw) rotate(30deg) !important;
   }
 }/*# sourceMappingURL=style.css.map */

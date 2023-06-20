@@ -660,7 +660,7 @@ footer {
       margin-right: inherit !important;
       background-image: url(/img/alexis.jpg);
       opacity: 0;
-      transform: translateX(175%) rotate(30deg) !important;
+      transform: translateX(-20vw) rotate(30deg) !important;
       transition: 0.1s ease;
     }
 
@@ -733,7 +733,7 @@ footer {
         object-position: center;
         object-fit: cover;
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.46);
-        margin-left: 200px;
+        margin-left: 8vw;
         margin-top: 150px;
         display: inherit;
       }
@@ -826,3 +826,21 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 1920px) { 
+  
+  #reviews{
+    .img {
+      img {
+        margin-left: 200px;
+      }
+    }
+  }
+
+  #readers{
+    .thumbnail{
+      transform: translateX(-10vw) rotate(30deg) !important;
+    }
+  }
+}
+
