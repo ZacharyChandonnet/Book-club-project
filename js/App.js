@@ -12,7 +12,8 @@ export default class App {
     this.hover();
     this.text();
     this.alert();
-    this.user();
+    this.review();
+    this.data();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -158,7 +159,7 @@ export default class App {
     });
   }
 
-  static user() {
+  static review() {
 
     // ANIMATION  
     var user = document.querySelector('.users');
@@ -172,44 +173,43 @@ export default class App {
     );
 
     tl.repeatDelay(0);
+  }
 
-    const data = document.querySelector('.data');
+  static data() {
 
-   
     var formulaire = document.getElementById('mon-formulaire');
-    formulaire.addEventListener('submit', function (event) {
-      event.preventDefault();
-    
+    formulaire.addEventListener('submit', function (e) {
+      e.preventDefault();
+
       var user = document.getElementById('nom').value;
       var review = document.getElementById('cote').value;
-    
+
       var donnee = document.getElementById('donnee');
-    
+
       var imageInput = document.getElementById('imageFile');
       var file = imageInput.files[0];
-    
+
       var reader = new FileReader();
       reader.onload = function (e) {
         var imgSrc = e.target.result;
-    
-        var img = document.createElement('img');
+
+        var img = donnee.appendChild(document.createElement('img'));
         img.src = imgSrc;
         img.alt = 'user';
         img.classList.add('photo');
-        donnee.appendChild(img);
     
         var hfour = document.createElement('h4');
         hfour.classList.add('utilisateur');
         hfour.innerHTML = user;
         donnee.appendChild(hfour);
-    
+
         var cote = document.createElement('p');
         cote.classList.add('cote');
         cote.innerHTML = ' " ' + review + ' " ';
         donnee.appendChild(cote);
       };
       reader.readAsDataURL(file);
-    });    
+    });
   }
 }
 App.init();
