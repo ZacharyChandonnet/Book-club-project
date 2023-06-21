@@ -183,32 +183,38 @@ export default class App {
 
       var user = document.getElementById('nom').value;
       var review = document.getElementById('cote').value;
-
+      var book = document.getElementById('book').value;
       var donnee = document.getElementById('donnee');
 
       var imageInput = document.getElementById('imageFile');
       var file = imageInput.files[0];
 
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        var imgSrc = e.target.result;
+      if (file && (file.type === 'image/png' || file.type === 'image/jpeg') || file.type === 'image/jpg' || file.type === 'image/gif') {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var imgSrc = e.target.result;
 
-        var img = donnee.appendChild(document.createElement('img'));
-        img.src = imgSrc;
-        img.alt = 'user';
-        img.classList.add('photo');
-    
-        var hfour = document.createElement('h4');
-        hfour.classList.add('utilisateur');
-        hfour.innerHTML = user;
-        donnee.appendChild(hfour);
+          var img = donnee.appendChild(document.createElement('img'));
+          img.src = imgSrc;
+          img.alt = 'user';
+          img.classList.add('photo');
 
-        var cote = document.createElement('p');
-        cote.classList.add('cote');
-        cote.innerHTML = ' " ' + review + ' " ';
-        donnee.appendChild(cote);
-      };
-      reader.readAsDataURL(file);
+          var hfour = donnee.appendChild(document.createElement('h4'));
+          hfour.classList.add('utilisateur');
+          hfour.innerHTML = user;
+
+          var hfive = donnee.appendChild(document.createElement('h5'));
+          hfive.innerHTML = book;
+
+          var cote = donnee.appendChild(document.createElement('p'));
+          cote.classList.add('cote');
+          cote.innerHTML = ' " ' + review + ' " ';
+        };
+        reader.readAsDataURL(file);
+      }
+      else {
+        alert("Please upload a valid image file");
+      }
     });
   }
 }

@@ -61,6 +61,22 @@ html {
   object-position: center;
 }
 
+#book{
+  margin-top: 30px;
+  background-color: var(--couleur-principale);
+  border: 1px solid var(--couleur-secondaire);
+
+  option{
+    background-color: var(--couleur-secondaire);
+    color: white;
+  }
+
+  option:hover{
+    background-color: var(--couleur-principale);
+    color: var(--couleur-secondaire);
+  }
+}
+
 .cote {
   font-style: italic;
 }
