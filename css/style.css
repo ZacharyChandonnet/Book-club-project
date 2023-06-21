@@ -47,6 +47,25 @@ html {
   transition: 0.5s ease;
 }
 
+.utilisateur {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.cote {
+  font-style: italic;
+}
+
 /*  PRELOADER  */
 #preloader {
   position: fixed;
@@ -345,12 +364,70 @@ h2.meeting {
   font-size: 20px;
 }
 
+#user h2 {
+  margin-top: 50px;
+  margin-left: 7vw;
+  font-size: 35px;
+  font-weight: 100;
+  color: var(--couleur-secondaire);
+}
+#user h2 span {
+  margin-left: 30px;
+}
+#user .contenu {
+  border-top: 1px solid var(--couleur-secondaire);
+  border-bottom: 1px solid var(--couleur-secondaire);
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#user .contenu .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+#user .contenu .form input {
+  width: 80vw;
+  background: none;
+  border: none;
+  margin-top: 30px;
+  border-bottom: 1px solid var(--couleur-secondaire);
+}
+#user .contenu .form input:last-of-type {
+  margin-bottom: 30px;
+}
+#user .contenu .form input:focus {
+  outline: none;
+}
+#user .contenu .form button {
+  margin-top: 30px;
+  width: 50vw;
+  height: 30px;
+  border: none;
+  background: none;
+  background-color: var(--couleur-secondaire);
+  color: var(--couleur-principale);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+#user .data {
+  margin-top: 50px;
+}
+
+footer {
+  background-color: var(--couleur-secondaire);
+}
 footer h2 {
   padding-left: 7vw;
-  margin-top: 125px;
+  padding-top: 100px;
   font-size: 35px;
   font-weight: 100;
   margin-bottom: 50px;
+  color: var(--couleur-principale);
 }
 footer h2 span {
   padding-left: 40px;
@@ -359,14 +436,14 @@ footer form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
 }
 footer form input {
   width: 80vw;
   background: none;
   border: none;
   margin-top: 30px;
-  border-bottom: 1px solid var(--couleur-secondaire);
+  border-bottom: 1px solid var(--couleur-principale) !important;
+  color: var(--couleur-principale);
 }
 footer form input:focus {
   outline: none;
@@ -377,8 +454,8 @@ footer form button {
   height: 30px;
   border: none;
   background: none;
-  background-color: var(--couleur-secondaire);
-  color: var(--couleur-principale);
+  background-color: var(--couleur-principale);
+  color: var(--couleur-secondaire);
   border-radius: 20px;
 }
 footer .friends {
@@ -614,6 +691,7 @@ footer .friends {
   }
   footer {
     margin-top: 150px;
+    position: relative;
   }
   footer h2 {
     padding-left: 13vw;
@@ -626,7 +704,7 @@ footer .friends {
   footer .form {
     display: flex;
     padding-left: 13vw;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
   footer form {
     display: flex;
@@ -651,6 +729,11 @@ footer .friends {
   }
   footer .friends {
     display: inherit !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 13vw;
+    margin-top: 14vw;
   }
   #review {
     height: 900px;
@@ -687,6 +770,39 @@ footer .friends {
     margin-top: 20px;
     width: 20vw;
     line-height: 40px;
+  }
+  #user h2 {
+    font-size: 75px;
+    font-weight: 100;
+    padding-left: 7vw !important;
+    padding-top: 75px;
+    font-weight: 100;
+  }
+  #user h2 span {
+    margin-left: 50px;
+  }
+  #user .contenu {
+    display: flex !important;
+    height: 600px;
+  }
+  #user .contenu .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-top: inherit !important;
+  }
+  #user .contenu .form {
+    margin-left: auto !important;
+    margin-right: 5vw !important;
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+  }
+  #user .contenu .form input {
+    width: 20vw !important;
+  }
+  #user .contenu .form button {
+    width: 10vw !important;
   }
 }
 @media screen and (min-width: 1920px) {

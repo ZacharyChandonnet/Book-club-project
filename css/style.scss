@@ -8,7 +8,6 @@ html {
   --couleur-secondaire: #252620;
 }
 
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -47,6 +46,23 @@ html {
 .arrow {
   transform: rotate(-45deg);
   transition: 0.5s ease;
+}
+
+.utilisateur {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cote {
+  font-style: italic;
 }
 
 /*  PRELOADER  */
@@ -374,7 +390,6 @@ h2.meeting {
       border-radius: 50px;
       object-fit: cover;
       object-position: center;
-     
     }
 
     p {
@@ -385,7 +400,7 @@ h2.meeting {
     }
   }
 
-  #check{
+  #check {
     position: absolute;
     top: 0;
     right: 0;
@@ -393,14 +408,79 @@ h2.meeting {
   }
 }
 
+#user {
+  h2 {
+    margin-top: 50px;
+    margin-left: 7vw;
+    font-size: 35px;
+    font-weight: 100;
+    color: var(--couleur-secondaire);
+
+    span {
+      margin-left: 30px;
+    }
+  }
+
+  .contenu {
+    border-top: 1px solid var(--couleur-secondaire);
+    border-bottom: 1px solid var(--couleur-secondaire);
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 50px;
+
+      input {
+        width: 80vw;
+        background: none;
+        border: none;
+        margin-top: 30px;
+        border-bottom: 1px solid var(--couleur-secondaire);
+      }
+
+      input:last-of-type {
+        margin-bottom: 30px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        margin-top: 30px;
+        width: 50vw;
+        height: 30px;
+        border: none;
+        background: none;
+        background-color: var(--couleur-secondaire);
+        color: var(--couleur-principale);
+        border-radius: 20px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .data {
+    margin-top: 50px;
+  }
+}
+
 footer {
+  background-color: var(--couleur-secondaire);
   h2 {
     padding-left: 7vw;
-    margin-top: 125px;
+    padding-top: 100px;
     font-size: 35px;
     font-weight: 100;
     margin-bottom: 50px;
-
+    color: var(--couleur-principale);
     span {
       padding-left: 40px;
     }
@@ -416,7 +496,8 @@ footer {
       background: none;
       border: none;
       margin-top: 30px;
-      border-bottom: 1px solid var(--couleur-secondaire);
+      border-bottom: 1px solid var(--couleur-principale) !important;
+      color: var(--couleur-principale);
     }
 
     input:focus {
@@ -429,11 +510,10 @@ footer {
       height: 30px;
       border: none;
       background: none;
-      background-color: var(--couleur-secondaire);
-      color: var(--couleur-principale);
+      background-color: var(--couleur-principale);
+      color: var(--couleur-secondaire);
       border-radius: 20px;
     }
-    margin-bottom: 100px;
   }
 
   .friends {
@@ -553,26 +633,26 @@ footer {
     }
   }
 
-  #review{
-    h2{
+  #review {
+    h2 {
       font-size: 75px;
       margin-top: 55px;
     }
 
-    .vignette{
-      p{
+    .vignette {
+      p {
         line-height: 25px;
       }
     }
   }
 
-  footer{
-    h2{
+  footer {
+    h2 {
       font-size: 75px;
       margin-top: 55px;
       font-weight: 100;
 
-      span{
+      span {
         padding-left: 55px;
       }
     }
@@ -742,6 +822,7 @@ footer {
 
   footer {
     margin-top: 150px;
+    position: relative;
 
     h2 {
       padding-left: 13vw;
@@ -755,7 +836,7 @@ footer {
     .form {
       display: flex;
       padding-left: 13vw;
-      margin-bottom: 50px;
+      padding-bottom: 50px;
     }
 
     form {
@@ -784,6 +865,11 @@ footer {
     }
     .friends {
       display: inherit !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 13vw;
+      margin-top: 14vw;
     }
   }
 
@@ -825,11 +911,52 @@ footer {
       }
     }
   }
+
+  #user {
+    h2 {
+      font-size: 75px;
+      font-weight: 100;
+      padding-left: 7vw !important;
+      padding-top: 75px;
+      font-weight: 100;
+
+      span {
+        margin-left: 50px;
+      }
+    }
+
+    .contenu {
+      display: flex !important;
+      height: 600px;
+
+      .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5vw;
+        margin-top: inherit !important;
+      }
+
+      .form {
+        margin-left: auto !important;
+        margin-right: 5vw !important;
+        margin-top: inherit !important;
+        margin-bottom: inherit !important;
+
+        input {
+          width: 20vw !important;
+        }
+
+        button {
+          width: 10vw !important;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 1920px) { 
-  
-  #reviews{
+@media screen and (min-width: 1920px) {
+  #reviews {
     .img {
       img {
         margin-left: 200px;
@@ -837,10 +964,9 @@ footer {
     }
   }
 
-  #readers{
-    .thumbnail{
+  #readers {
+    .thumbnail {
       transform: translateX(-10vw) rotate(30deg) !important;
     }
   }
 }
-

@@ -12,6 +12,7 @@ export default class App {
     this.hover();
     this.text();
     this.alert();
+    this.user();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -142,7 +143,7 @@ export default class App {
 
     const form = document.querySelector('.formu');
     const email = document.querySelector('#email');
-    
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (email.value == '') {
@@ -154,10 +155,61 @@ export default class App {
           alert('Your email has been sent, Thank you !');
         }, 100);
       }
-    });    
+    });
   }
 
- 
+  static user() {
 
+    // ANIMATION  
+    var user = document.querySelector('.users');
+    var tl = new TimelineMax({ repeat: -1 });
+
+    tl.fromTo(
+      user,
+      1,
+      { y: "+=20" },
+      { y: "-=20", yoyo: true, repeat: 10 }
+    );
+
+    tl.repeatDelay(0);
+
+    const data = document.querySelector('.data');
+
+   
+    var formulaire = document.getElementById('mon-formulaire');
+    formulaire.addEventListener('submit', function (event) {
+      event.preventDefault();
+    
+      var user = document.getElementById('nom').value;
+      var review = document.getElementById('cote').value;
+    
+      var donnee = document.getElementById('donnee');
+    
+      var imageInput = document.getElementById('imageFile');
+      var file = imageInput.files[0];
+    
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var imgSrc = e.target.result;
+    
+        var img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = 'user';
+        img.classList.add('photo');
+        donnee.appendChild(img);
+    
+        var hfour = document.createElement('h4');
+        hfour.classList.add('utilisateur');
+        hfour.innerHTML = user;
+        donnee.appendChild(hfour);
+    
+        var cote = document.createElement('p');
+        cote.classList.add('cote');
+        cote.innerHTML = ' " ' + review + ' " ';
+        donnee.appendChild(cote);
+      };
+      reader.readAsDataURL(file);
+    });    
+  }
 }
 App.init();

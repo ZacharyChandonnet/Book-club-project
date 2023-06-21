@@ -32,10 +32,9 @@
 
     <title>Book club</title>
   </head>
-  
+
   <body onload="move()">
     <div id="preloader">
-   
       <div id="percent">1%</div>
       <div id="bar">
         <div id="barconfirm"></div>
@@ -173,46 +172,97 @@
     <section id="review">
       <h2>
         OUR <br />
-        <span>reviews</span>
+        <span>Reviews</span>
       </h2>
       <div class="grid">
         <div class="vignette">
-          <img src="/img/alexis.jpg" alt="alex">
-          <p>" This captivating book completely transported me to a world of adventure and intrigue, making it impossible to put down until the very last page. " 
-           <br>  <i class="fa-regular fa-star" style="color: #e0d2c1;"></i> 
-           <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-           <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
+          <img src="/img/alexis.jpg" alt="alex" />
+          <p>
+            " This captivating book completely transported me to a world of
+            adventure and intrigue, making it impossible to put down until the
+            very last page. " <br />
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
           </p>
         </div>
         <div class="vignette">
-          <img src="/img/karo.jpg" style="background-position: center; background-size: cover;" alt="karo">
-          <p>" The author has managed to create characters so realistic and endearing that I laughed, cried, and felt every emotion with them throughout this incredible story. "
-            <br>  <i class="fa-regular fa-star" style="color: #e0d2c1;"></i> 
-           <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-           <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-           <i class="fa-regular fa-star-half" style="color: #e0d2c1;"></i>
+          <img
+            src="/img/karo.jpg"
+            style="background-position: center; background-size: cover"
+            alt="karo"
+          />
+          <p>
+            " The author has managed to create characters so realistic and
+            endearing that I laughed, cried, and felt every emotion with them
+            throughout this incredible story. " <br />
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star-half" style="color: #e0d2c1"></i>
           </p>
         </div>
         <div class="vignette">
-          <img src="/img/r1.jpg" style="background-position: center; background-size: cover;" alt="ali">
-          <p>" The author's fluid and poetic writing style enchanted me, immersing me in an enchanting atmosphere where every word seemed to come alive before my eyes. "
-            <br>  <i class="fa-regular fa-star" style="color: #e0d2c1;"></i> 
-            <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-            <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-            <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
+          <img
+            src="/img/r1.jpg"
+            style="background-position: center; background-size: cover"
+            alt="ali"
+          />
+          <p>
+            " The author's fluid and poetic writing style enchanted me,
+            immersing me in an enchanting atmosphere where every word seemed to
+            come alive before my eyes. " <br />
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
           </p>
         </div>
         <div class="vignette">
-          <img src="/img/r2.jpg" style="background-position: center; background-size: cover;" alt="ari">
-          <p>" This book is a literary masterpiece that made me ponder deep and universal questions, leaving an indelible imprint on my mind long after I closed it. "
-            <br>  <i class="fa-regular fa-star" style="color: #e0d2c1;"></i> 
-            <i class="fa-regular fa-star" style="color: #e0d2c1;"></i>
-            <i class="fa-regular fa-star-half" style="color: #e0d2c1;"></i>
+          <img
+            src="/img/r2.jpg"
+            style="background-position: center; background-size: cover"
+            alt="ari"
+          />
+          <p>
+            " This book is a literary masterpiece that made me ponder deep and
+            universal questions, leaving an indelible imprint on my mind long
+            after I closed it. " <br />
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star" style="color: #e0d2c1"></i>
+            <i class="fa-regular fa-star-half" style="color: #e0d2c1"></i>
           </p>
         </div>
       </div>
     </section>
-    
+
+    <section id="user">
+      <h2 class="users">
+        YOUR <br />
+        <span>Reviews</span>
+      </h2>
+
+      <div class="contenu">
+        <div class="data" id="donnee">
+         
+      
+
+        </div>
+        <div class="form">
+          <form action="" class="form" id="mon-formulaire">
+            <input type="text" name="name" id="nom" placeholder="name" />
+            <input
+              type="text"
+              name="cote"
+              id="cote"
+              placeholder="review"
+            />
+            <input class="img" type="file" id="imageFile" />
+            <button class="btn" type="submit">send</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <footer id="contact">
       <h2>
@@ -241,7 +291,7 @@
 
         <h2 class="friends" style="display: none">
           We're always <br />
-          looking for new friends
+          looking for new friends.
         </h2>
       </div>
     </footer>
