@@ -14,6 +14,7 @@ export default class App {
     this.alert();
     this.review();
     this.data();
+    this.icons();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -176,7 +177,7 @@ export default class App {
   }
 
   static data() {
-    
+
     var formulaire = document.getElementById('mon-formulaire');
     formulaire.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -189,7 +190,7 @@ export default class App {
       var imageInput = document.getElementById('imageFile');
       var file = imageInput.files[0];
 
-      
+
 
       if (user == '' || review == '' || book == '' || file == '') {
         alert('Please fill in all fields !');
@@ -222,6 +223,26 @@ export default class App {
           alert("Please upload a valid image file");
         }
       }
+    });
+  }
+
+  static icons() {
+    const icon = document.getElementById("bulled");
+    gsap.to(icon, {
+      opacity: 0,
+      duration: 3, 
+      ease: "power1.inOut", 
+      repeat: -1, 
+      yoyo: true 
+    });
+
+    const icon2 = document.getElementById("bulle");
+    gsap.to(icon2, {
+      opacity: 0,
+      duration: 3, 
+      ease: "power1.inOut", 
+      repeat: -1, 
+      yoyo: true 
     });
   }
 }
