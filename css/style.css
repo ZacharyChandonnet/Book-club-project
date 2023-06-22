@@ -54,13 +54,15 @@ html {
 }
 
 .photo {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 #book {
@@ -80,6 +82,7 @@ html {
 #bulle {
   font-size: 30px;
   margin-left: 9vw;
+  display: none;
 }
 
 .cote {
@@ -585,6 +588,19 @@ footer .friends {
 }
 /*     DESKTOP        */
 @media screen and (min-width: 1200px) {
+  #bulle {
+    display: inherit !important;
+  }
+  #donnee {
+    position: relative;
+  }
+  #donnee #bulled {
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+    padding-left: 200px;
+    padding-top: 145px;
+  }
   header .slogan {
     padding-top: 175px;
   }

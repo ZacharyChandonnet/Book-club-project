@@ -176,7 +176,7 @@ export default class App {
   }
 
   static data() {
-
+    
     var formulaire = document.getElementById('mon-formulaire');
     formulaire.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -189,35 +189,38 @@ export default class App {
       var imageInput = document.getElementById('imageFile');
       var file = imageInput.files[0];
 
-      if (condition) {
-        
-      }
+      
 
-      if (file && (file.type === 'image/png' || file.type === 'image/jpeg') || file.type === 'image/jpg' || file.type === 'image/gif') {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          var imgSrc = e.target.result;
+      if (user == '' || review == '' || book == '' || file == '') {
+        alert('Please fill in all fields !');
+      } else {
 
-          var img = donnee.appendChild(document.createElement('img'));
-          img.src = imgSrc;
-          img.alt = 'user';
-          img.classList.add('photo');
+        if (file && (file.type === 'image/png' || file.type === 'image/jpeg') || file.type === 'image/jpg' || file.type === 'image/gif') {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            var imgSrc = e.target.result;
 
-          var hfour = donnee.appendChild(document.createElement('h4'));
-          hfour.classList.add('utilisateur');
-          hfour.innerHTML = user;
+            var img = donnee.appendChild(document.createElement('img'));
+            img.src = imgSrc;
+            img.alt = 'user';
+            img.classList.add('photo');
 
-          var hfive = donnee.appendChild(document.createElement('h5'));
-          hfive.innerHTML = book;
+            var hfour = donnee.appendChild(document.createElement('h4'));
+            hfour.classList.add('utilisateur');
+            hfour.innerHTML = user;
 
-          var cote = donnee.appendChild(document.createElement('p'));
-          cote.classList.add('cote');
-          cote.innerHTML = ' " ' + review + ' " ';
-        };
-        reader.readAsDataURL(file);
-      }
-      else {
-        alert("Please upload a valid image file");
+            var hfive = donnee.appendChild(document.createElement('h5'));
+            hfive.innerHTML = book;
+
+            var cote = donnee.appendChild(document.createElement('p'));
+            cote.classList.add('cote');
+            cote.innerHTML = ' " ' + review + ' " ';
+          };
+          reader.readAsDataURL(file);
+        }
+        else {
+          alert("Please upload a valid image file");
+        }
       }
     });
   }
