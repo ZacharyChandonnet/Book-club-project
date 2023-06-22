@@ -1,6 +1,8 @@
+@import url("/css/melodrama.css");
+
 html {
   background-color: var(--couleur-principale);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Melodrama-Regular";
   scroll-behavior: smooth;
   font-size: 16px;
 
@@ -61,20 +63,25 @@ html {
   object-position: center;
 }
 
-#book{
+#book {
   margin-top: 30px;
   background-color: var(--couleur-principale);
   border: 1px solid var(--couleur-secondaire);
 
-  option{
+  option {
     background-color: var(--couleur-secondaire);
     color: white;
   }
 
-  option:hover{
+  option:hover {
     background-color: var(--couleur-principale);
     color: var(--couleur-secondaire);
   }
+}
+
+#bulle {
+  font-size: 30px;
+  margin-left: 9vw;
 }
 
 .cote {
@@ -479,6 +486,12 @@ h2.meeting {
         color: var(--couleur-principale);
         border-radius: 20px;
         margin: 0 auto;
+      }
+
+      button:hover {
+        background-color: white;
+        color: var(--couleur-secondaire);
+        transition: 0.3s ease-in-out;
       }
     }
   }

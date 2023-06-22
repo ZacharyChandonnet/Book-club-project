@@ -1,6 +1,7 @@
+@import url("/css/melodrama.css");
 html {
   background-color: var(--couleur-principale);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Melodrama-Regular";
   scroll-behavior: smooth;
   font-size: 16px;
   --couleur-principale: rgb(224, 210, 193);
@@ -74,6 +75,11 @@ html {
 #book option:hover {
   background-color: var(--couleur-principale);
   color: var(--couleur-secondaire);
+}
+
+#bulle {
+  font-size: 30px;
+  margin-left: 9vw;
 }
 
 .cote {
@@ -427,6 +433,11 @@ h2.meeting {
   color: var(--couleur-principale);
   border-radius: 20px;
   margin: 0 auto;
+}
+#user .contenu .form button:hover {
+  background-color: white;
+  color: var(--couleur-secondaire);
+  transition: 0.3s ease-in-out;
 }
 #user .data {
   margin-top: 50px;

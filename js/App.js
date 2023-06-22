@@ -189,6 +189,10 @@ export default class App {
       var imageInput = document.getElementById('imageFile');
       var file = imageInput.files[0];
 
+      if (condition) {
+        
+      }
+
       if (file && (file.type === 'image/png' || file.type === 'image/jpeg') || file.type === 'image/jpg' || file.type === 'image/gif') {
         var reader = new FileReader();
         reader.onload = function (e) {
