@@ -29,6 +29,10 @@ html {
   background-color: #fff;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .cursor {
   position: fixed;
   top: 0;

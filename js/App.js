@@ -18,6 +18,8 @@ export default class App {
     this.date();
     this.imgHeader();
     this.cursor();
+    this.show();
+
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -302,5 +304,23 @@ export default class App {
       });
     });
   }
+
+  static show() {
+    var items = document.querySelectorAll('.item');
+    
+    function fadeInOnScroll() {
+      items.forEach(function (item) {
+        var position = item.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (position < windowHeight) {
+          gsap.to(item, { opacity: 1, duration: 3, delay:0.2, ease: "power4.out" });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', fadeInOnScroll);
+  }
+
 }
 App.init();
