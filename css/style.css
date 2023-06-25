@@ -626,6 +626,9 @@ footer .friends {
     padding-left: 200px;
     padding-top: 145px;
   }
+  header {
+    border-bottom: 1px solid var(--couleur-secondaire);
+  }
   header .imgHeader {
     display: inherit !important;
     position: absolute;
@@ -638,6 +641,8 @@ footer .friends {
     -o-object-position: right;
        object-position: right;
     border-radius: 200px;
+    box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.49);
+    opacity: 0;
   }
   header .background {
     position: absolute;

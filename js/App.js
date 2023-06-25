@@ -16,6 +16,7 @@ export default class App {
     this.data();
     this.icons();
     this.date();
+    this.imgHeader();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -252,7 +253,7 @@ export default class App {
 
     var countDownDate = new Date("July 6, 2023 20:00:00").getTime();
 
-   
+
     var x = setInterval(function () {
 
       var now = new Date().getTime();
@@ -264,16 +265,24 @@ export default class App {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      
+
       document.getElementById("date").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 
-      
+
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
+  }
+
+  static imgHeader() {
+    gsap.to('.imgHeader', {
+      delay: 1.5,
+      duration: 3,
+      opacity: 1,
+    });
   }
 }
 App.init();
