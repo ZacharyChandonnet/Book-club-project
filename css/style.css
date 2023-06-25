@@ -8,6 +8,10 @@ html {
   --couleur-secondaire: #252620;
 }
 
+* {
+  cursor: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -23,6 +27,19 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #fff;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--couleur-secondaire);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
 }
 
 .hoveredmobile {

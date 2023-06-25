@@ -17,6 +17,7 @@ export default class App {
     this.icons();
     this.date();
     this.imgHeader();
+    this.cursor();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -282,6 +283,23 @@ export default class App {
       delay: 1.5,
       duration: 3,
       opacity: 1,
+    });
+  }
+
+  static cursor() {
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      const cursorSize = 40; // La taille de votre curseur personnalisé
+
+      const x = e.clientX - cursorSize / 2; // Ajuste la position x
+      const y = e.clientY - cursorSize / 2; // Ajuste la position y
+
+      gsap.to(cursor, {
+        x: x,
+        y: y,
+        duration: 0.25,
+      });
     });
   }
 }
