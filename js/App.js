@@ -15,6 +15,7 @@ export default class App {
     this.review();
     this.data();
     this.icons();
+    this.date();
   }
   /**
    * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -215,6 +216,7 @@ export default class App {
 
             var cote = donnee.appendChild(document.createElement('p'));
             cote.classList.add('cote');
+            cote.style.marginBottom = '25px';
             cote.innerHTML = ' " ' + review + ' " ';
           };
           reader.readAsDataURL(file);
@@ -230,20 +232,48 @@ export default class App {
     const icon = document.getElementById("bulled");
     gsap.to(icon, {
       opacity: 0,
-      duration: 3, 
-      ease: "power1.inOut", 
-      repeat: -1, 
-      yoyo: true 
+      duration: 3,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true
     });
 
     const icon2 = document.getElementById("bulle");
     gsap.to(icon2, {
       opacity: 0,
-      duration: 3, 
-      ease: "power1.inOut", 
-      repeat: -1, 
-      yoyo: true 
+      duration: 3,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true
     });
+  }
+
+  static date() {
+
+    var countDownDate = new Date("July 6, 2023 20:00:00").getTime();
+
+   
+    var x = setInterval(function () {
+
+      var now = new Date().getTime();
+
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      
+      document.getElementById("date").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   }
 }
 App.init();
