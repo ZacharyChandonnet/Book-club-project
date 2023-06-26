@@ -796,7 +796,7 @@ footer .friends {
   #reviews .img img {
     width: 550px;
     height: 550px;
-    border-radius: 20px;
+    border-radius: 50% 20% 80% 30%/40% 60% 70% 10%;
     -o-object-position: center;
        object-position: center;
     -o-object-fit: cover;
@@ -805,6 +805,15 @@ footer .friends {
     margin-left: 8vw;
     margin-top: 150px;
     display: inherit;
+    animation: pulse 2s ease-in-out infinite alternate;
+  }
+  @keyframes pulse {
+    0% {
+      border-radius: 50% 20% 80% 30%/40% 60% 70% 10%;
+    }
+    100% {
+      border-radius: 40% 60% 70% 10%/50% 20% 80% 30%;
+    }
   }
   footer {
     margin-top: 150px;
