@@ -233,23 +233,23 @@ export default class App {
   }
 
   static icons() {
-    const icon = document.getElementById("bulled");
-    gsap.to(icon, {
-      opacity: 0,
-      duration: 3,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true
-    });
+    // const icon = document.getElementById("bulled");
+    // gsap.to(icon, {
+    //   opacity: 0,
+    //   duration: 3,
+    //   ease: "power1.inOut",
+    //   repeat: -1,
+    //   yoyo: true
+    // });
 
-    const icon2 = document.getElementById("bulle");
-    gsap.to(icon2, {
-      opacity: 0,
-      duration: 3,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true
-    });
+    // const icon2 = document.getElementById("bulle");
+    // gsap.to(icon2, {
+    //   opacity: 0,
+    //   duration: 3,
+    //   ease: "power1.inOut",
+    //   repeat: -1,
+    //   yoyo: true
+    // });
   }
 
   static date() {
