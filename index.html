@@ -248,14 +248,22 @@
 
       <div class="contenu">
         <div class="data" id="donnee">
-          <i id="bulled" class="fa-regular fa-comment" style="color: #252620;"></i>
-      
+          <i id="bulled" class="fa-regular fa-comment" style="color: #252620;"></i> <br>
+          
 
         </div>
         <div class="form">
-          <i  id="bulle" class="fa-solid fa-users" style="color: #252620;"></i>
+          <i  id="bulle" class="fa-solid fa-users" style="color: rgb(224, 210, 193);"></i>
           <form action="" class="form" id="mon-formulaire">
-            <input style="font-family: Melodrama-Regular; font-weight: bolder;" type="text" name="name" id="nom" placeholder="name" />
+
+            <input style="font-family: Melodrama-Regular; font-weight: bolder;" type="text" name="name" id="nom" placeholder="name"/>
+
+            <select style="font-family: Melodrama-Regular; font-weight: bolder;"  name="book" id="book">
+              <option style="font-family: Melodrama-Regular;" value="The Inheritance games">The Inheritance games</option>
+              <option style="font-family: Melodrama-Regular;" value="example 02">example 02</option>
+              <option style="font-family: Melodrama-Regular;" value="example 03">example 03</option>
+            </select>  
+
             <input
             style="font-family: Melodrama-Regular; font-weight: bolder;"
               type="text"
@@ -263,13 +271,8 @@
               id="cote"
               placeholder="review"
             />
-            <select style="font-family: Melodrama-Regular; font-weight: bolder;"  name="book" id="book">
-              <option style="font-family: Melodrama-Regular;" value="The Inheritance games">The Inheritance games</option>
-              <option style="font-family: Melodrama-Regular;" value="example 02">example 02</option>
-              <option style="font-family: Melodrama-Regular;" value="example 03">example 03</option>
-            </select>  
-            <input style="font-family: Melodrama-Regular; font-weight: bolder;" class="img" type="file" id="imageFile" />
-            <button class="btn" type="submit">send</button>
+            <input style="font-family: Melodrama-Regular; font-weight: thin; color: white;" class="img" type="file" id="imageFile" />
+            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane" style="color: #252620;"></i></button>
           </form>
         </div>
       </div>

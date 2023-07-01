@@ -6,13 +6,12 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
 
-
   --couleur-principale: rgb(224, 210, 193);
   --couleur-secondaire: #252620;
 }
 
 * {
-  cursor: none; 
+  cursor: none;
 }
 
 ::-webkit-scrollbar {
@@ -54,7 +53,7 @@ html {
   text-align: center;
 }
 
-#date{
+#date {
   color: var(--couleur-principale);
   font-size: 20px;
   font-weight: lighter;
@@ -62,7 +61,7 @@ html {
   margin-top: 10px;
 }
 
-#titleDate{
+#titleDate {
   color: var(--couleur-principale);
   font-size: 20px;
   font-weight: bold;
@@ -87,11 +86,11 @@ html {
   object-fit: cover;
   object-position: center;
   margin-bottom: 5px;
-  box-shadow:  1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 #book {
-  margin-top: 30px;
+  margin-top: 15px;
   background-color: var(--couleur-principale);
   border: 1px solid var(--couleur-secondaire);
 
@@ -106,14 +105,9 @@ html {
   }
 }
 
-#bulle {
+#bulle,
+#bulled {
   font-size: 30px;
-  margin-left: 9vw;
-  display: none;
-}
-
-#bulled{
-  display: none;
 }
 
 .cote {
@@ -169,7 +163,7 @@ header {
   width: 100%;
   height: 100vh;
 
-  .imgHeader{
+  .imgHeader {
     display: none;
   }
 
@@ -211,7 +205,6 @@ header {
       color: var(--couleur-secondaire);
       border: 1px solid var(--couleur-secondaire);
       padding: 5px 10px;
-      
     }
   }
 
@@ -221,7 +214,6 @@ header {
     padding-top: 150px;
     padding-left: 7vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    
 
     span {
       padding-left: 100px;
@@ -232,7 +224,6 @@ header {
     transform: translateY(115px);
     transition: transform 1s;
     opacity: 0;
-    
   }
 
   .location {
@@ -471,6 +462,7 @@ h2.meeting {
 }
 
 #user {
+  margin-bottom: 100px;
   h2 {
     margin-top: 50px;
     margin-left: 7vw;
@@ -492,18 +484,32 @@ h2.meeting {
     display: grid;
     grid-template-columns: 1fr;
 
+    .data {
+      margin-bottom: 50px;
+      margin: 0 auto;
+      margin-top: 25px;
+
+      #bulled {
+        margin-bottom: 50px;
+      }
+    }
+
     .form {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-top: 60px;
+      align-items: center;
+      margin-top: 15px;
       margin-bottom: 50px;
+      background-color: var(--couleur-secondaire);
+      border-radius: 15px;
 
-      input {
-        width: 80vw;
-        background: none;
+      input,
+      select {
+        width: 70vw;
+        border-radius: 20px;
         border: none;
-        margin-top: 30px;
+        margin-top: 15px;
         border-bottom: 1px solid var(--couleur-secondaire);
       }
 
@@ -525,12 +531,17 @@ h2.meeting {
         color: var(--couleur-principale);
         border-radius: 20px;
         margin: 0 auto;
+        background-color: var(--couleur-principale);
       }
 
       button:hover {
         background-color: white;
         color: var(--couleur-secondaire);
         transition: 0.3s ease-in-out;
+      }
+
+      #bulle {
+        padding-top: 25px;
       }
     }
   }
@@ -542,7 +553,7 @@ h2.meeting {
 
 footer {
   background-color: var(--couleur-secondaire);
-  height: 550px;
+  height: 650px;
   h2 {
     padding-left: 7vw;
     padding-top: 75px;
@@ -731,7 +742,6 @@ footer {
 /*     DESKTOP        */
 
 @media screen and (min-width: 1200px) {
-
   .cursor {
     position: fixed;
     top: 0;
@@ -744,16 +754,15 @@ footer {
     z-index: 9999;
     mix-blend-mode: difference;
   }
-  
 
-  #bulle{
+  #bulle {
     display: inherit !important;
   }
 
-  #donnee{
+  #donnee {
     position: relative;
 
-    #bulled{
+    #bulled {
       display: inherit !important;
       position: absolute;
       top: 0;
@@ -764,20 +773,19 @@ footer {
   }
 
   header {
-
     border-bottom: 1px solid var(--couleur-secondaire);
 
-    .imgHeader{
+    .imgHeader {
       display: inherit !important;
       position: absolute;
-      width:400px;
+      width: 400px;
       height: 650px;
       top: 20%;
       right: 65%;
       object-fit: cover;
       object-position: right;
       border-radius: 200px;
-      box-shadow: 8px 7px 15px -2px rgba(0,0,0,0.49);
+      box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.49);
       opacity: 0;
     }
 
@@ -800,8 +808,6 @@ footer {
     nav {
       font-size: 18px;
     }
-
-    
 
     .start {
       a:hover {
@@ -959,7 +965,6 @@ footer {
         }
       }
     }
-    
   }
 
   footer {
@@ -1070,7 +1075,9 @@ footer {
 
     .contenu {
       display: flex !important;
-      height: 600px;
+      width: 70vw !important;
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
 
       .data {
         display: flex;
@@ -1078,31 +1085,44 @@ footer {
         justify-content: center;
         margin-left: 5vw;
         margin-top: inherit !important;
+
+        #bulled {
+          font-size: 35px;
+          margin-left: 10vw;
+        }
       }
 
       .form {
         margin-left: auto !important;
-        margin-right: 5vw !important;
         margin-top: inherit !important;
         margin-bottom: inherit !important;
+        width: 25vw !important;
+        height: 450px;
+        margin: auto 0 !important;
 
-        input {
+        input,
+        select {
           width: 20vw !important;
         }
 
         button {
           width: 10vw !important;
         }
+
+        #bulle {
+          padding-top: 100px;
+          font-size: 35px;
+        }
       }
     }
   }
 
-  #date{
+  #date {
     text-align: inherit !important;
     padding-left: 13vw !important;
   }
 
-  #titleDate{
+  #titleDate {
     text-align: inherit !important;
     padding-left: 13vw !important;
     margin-top: 10px !important;
