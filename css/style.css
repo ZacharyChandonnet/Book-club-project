@@ -705,7 +705,7 @@ footer .friends {
   header .title {
     font-size: 150px;
     padding-left: 15vw;
-    padding-top: 75px;
+    padding-top: 50px;
     line-height: 12rem;
   }
   header .title span {
@@ -990,6 +990,7 @@ footer .friends {
   }
   header .title {
     font-size: 200px;
+    padding-top: 75px;
   }
   #readers .thumbnail {
     transform: translateX(-10vw) rotate(30deg) !important;

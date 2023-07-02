@@ -820,7 +820,7 @@ footer {
     .title {
       font-size: 150px;
       padding-left: 15vw;
-      padding-top: 75px;
+      padding-top: 50px;
       line-height: 12rem;
 
       span {
@@ -1139,7 +1139,7 @@ footer {
     }
   }
 
-  header{
+  header {
     .imgHeader {
       display: inherit !important;
       position: absolute;
@@ -1154,9 +1154,10 @@ footer {
       opacity: 0;
     }
 
-   .title{
-    font-size: 200px;
-   }
+    .title {
+      font-size: 200px;
+      padding-top: 75px;
+    }
   }
 
   #readers {
