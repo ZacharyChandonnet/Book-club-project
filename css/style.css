@@ -705,6 +705,7 @@ footer .friends {
   header .title {
     font-size: 150px;
     padding-left: 15vw;
+    padding-top: 100px;
     line-height: 12rem;
   }
   header .title span {
