@@ -705,7 +705,7 @@ footer .friends {
   header .title {
     font-size: 150px;
     padding-left: 15vw;
-    padding-top: 250px;
+    padding-top: inherit !important;
     line-height: 12rem;
   }
   header .title span {
@@ -990,7 +990,7 @@ footer .friends {
   }
   header .title {
     font-size: 200px;
-    padding-top: 75px;
+    padding-top: 75px !important;
   }
   header .title span {
     padding-left: 200px;
