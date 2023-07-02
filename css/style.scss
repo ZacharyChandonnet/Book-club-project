@@ -820,11 +820,10 @@ footer {
     .title {
       font-size: 150px;
       padding-left: 15vw;
-      padding-top: 50px;
       line-height: 12rem;
 
       span {
-        padding-left: 200px;
+        padding-left: 125px;
       }
     }
 
@@ -1157,6 +1156,10 @@ footer {
     .title {
       font-size: 200px;
       padding-top: 75px;
+
+      span {
+        padding-left: 200px;
+      }
     }
   }
 
