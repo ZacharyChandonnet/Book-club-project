@@ -703,7 +703,7 @@ footer .friends {
     transition: 0.3s ease-in-out;
   }
   header .title {
-    font-size: 200px;
+    font-size: 150px;
     padding-left: 15vw;
     padding-top: 75px;
     line-height: 12rem;
@@ -987,6 +987,9 @@ footer .friends {
     border-radius: 200px;
     box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.49);
     opacity: 0;
+  }
+  header .title {
+    font-size: 200px;
   }
   #readers .thumbnail {
     transform: translateX(-10vw) rotate(30deg) !important;

@@ -818,7 +818,7 @@ footer {
     }
 
     .title {
-      font-size: 200px;
+      font-size: 150px;
       padding-left: 15vw;
       padding-top: 75px;
       line-height: 12rem;
@@ -1153,6 +1153,10 @@ footer {
       box-shadow: 8px 7px 15px -2px rgba(0, 0, 0, 0.49);
       opacity: 0;
     }
+
+   .title{
+    font-size: 200px;
+   }
   }
 
   #readers {
