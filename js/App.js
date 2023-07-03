@@ -11,7 +11,7 @@ export default class App {
     this.scroll();
     this.hover();
     this.text();
-    this.alert();
+    //this.alert();
     this.review();
     this.data();
     this.icons();
@@ -146,7 +146,7 @@ export default class App {
   }
 
 
-  static alert() {
+ /* static alert() {
 
     const form = document.querySelector('.formu');
     const email = document.querySelector('#email');
@@ -163,7 +163,7 @@ export default class App {
         }, 100);
       }
     });
-  }
+  }*/
 
   static review() {
 

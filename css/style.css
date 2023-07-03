@@ -455,11 +455,13 @@ h2.meeting {
 }
 #user .contenu .form input,
 #user .contenu .form select {
-  width: 70vw;
-  border-radius: 20px;
+  color: white;
   border: none;
+  width: 70vw;
+  background: none;
   margin-top: 15px;
-  border-bottom: 1px solid var(--couleur-secondaire);
+  border-bottom: 1px solid var(--couleur-principale);
+  font-weight: lighter;
 }
 #user .contenu .form input:last-of-type {
   margin-bottom: 30px;
