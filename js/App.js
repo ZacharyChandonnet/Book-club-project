@@ -246,7 +246,7 @@ export default class App {
 
   static date() {
 
-    var countDownDate = new Date("March 21, 2024 20:00:00").getTime();
+    var countDownDate = new Date("March 21, 2025 20:00:00").getTime();
 
 
     var x = setInterval(function () {
